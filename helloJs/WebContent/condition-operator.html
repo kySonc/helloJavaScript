@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>조건 연산자</title>
+</head>
+<body>
+	<h2>조건 연산자</h2>
+	<ul>
+		<li>조건식을 판별하여 참이냐 거짓이냐에 따라 다음 문장을 선택적으로 실행</li>
+	</ul>
+	<h2>max_value = (a > b) ? a : b; //a, b 중 큰 값을 저장</h2>
+	<hr>
+	<script>
+		var x = 5;
+		var y = 7;
+		var result;
+		result = (x > y)? x : y;	//조건 연산
+		document.write("큰 값 : " + result + "<br>");
+		result = (x > y)? x-y : y-x;	//조건 연산
+		document.write("큰 값-작은 값 : " + result + "<br>");
+	</script>	
+</body>
+</html>
