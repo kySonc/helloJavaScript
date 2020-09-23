@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>전역 변수와 지역 변수</title>
+</head>
+<body>
+	<h2>전역 변수</h2>
+	<ul>
+		<li>코드 내 어느 위치에서든 선언하여 전 영역에서 사용할 수 있는 변수</li>
+	</ul>
+	<h2>지역 변수</h2>
+	<ul>
+		<li>변수가 선언된 해당 블록에서 선언하여 범위 내에서만 유효하게 사용할 수 있는 변수</li>
+	</ul>
+	<hr>
+	<script>
+		function getGrade(){	//함수 정의
+			var kor = 95;	//지역 변수
+		}
+		var kor = 100;	//전역 변수
+		getGrade();	//함수 호출
+		document.write("국어점수 : " + kor + "<br>")
+	</script>
+	<hr>
+	<script>
+		function getGrade(){ //함수 정의
+			kor = 95;	//자동 전역 변수
+		}
+		var kor = 100;	//전역 변수
+		getGrade();	//함수 호출
+		document.write("국어 점수 : " + kor + "<br>");
+	</script>
+	<hr>
+	<script>
+		function getGrade(){ //함수 정의
+			var kor = 95;	//지역 변수
+		}
+		getGrade();	//함수 호출
+		document.write("지역 변수 값은 함수 외부에서 사용할 수 없습니다.<br>");
+		document.write("국어 점수 : " + kor + "<br>");
+	</script>
+	<hr>
+	<script>
+		function getGrade(){ //함수 정의
+			var kor = 95;	//지역 변수
+			return kor;
+		}
+		getkor = getGrade();	//함수 호출
+		document.write("국어 점수 : " + getkor + "<br>");
+	</script>
+	<hr>
+</body>
+</html>
