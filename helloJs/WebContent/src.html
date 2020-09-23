@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>자바스크립트 포함 방법</title>
+</head>
+<body>
+	<ul>
+		<li>
+			별도로 작성한 후 HTML 문서에서 참조하는 방법
+			<p>- 외부 자바스크립트 파일을 만든 후 HTML 문서의 script태그에 src 속성을 추가하여 참조</p>
+			<fieldset>
+				<legend>자바스크립트 파일 위치에 따른 src 속성값</legend>
+					<table border="1">
+						<tr>
+							<td>위치</td>
+							<td>src 속성값</td>
+						</tr>
+						<tr>
+							<td>HTML 문서와 같은 디렉터리에 있는 경우</td>
+							<td>< script src="myscript.js" > < /script >
+							</td>
+						</tr>
+						<tr>
+							<td>HTML 문서와 다른 디렉터리에 있는 경우</td>
+							<td>< script src="./ejs/myscript.js" > < /script ></td>
+						</tr>
+						<tr>
+							<td>HTML 문서와 다른 서버 디렉터리에 있는 경우</td>
+							<td>< script src="http://www.good.co.kr/jsfile/myscript.js" > < /script ></td>
+						</tr>
+					</table>
+			</fieldset>
+			<br>
+			<fielset>
+				<h2>자바스크립트 파일을 외부에서 작성했을 때의 장점</h2>
+				<ul>
+					<li>자바스크립트 파일을 HTML 문서와 분리하여 관리할 수 있음</li>
+					<li>자바스크립트 코드를 관리, 유지보수, 디버깅하기 쉬움</li>
+					<li>자바스크립트 코드의 보안성과 안전성을 높일 수 있음</li>
+				</ul>
+			</fielset>
+		</li>
+	</ul>
+</body>
+</html>
