@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>break문</title>
+</head>
+<body>
+	<h3>
+		<ul>
+			<li>break문
+				<ul>
+					<li>for문, while문, do-while문과 같은 반복문이나 switch-case문 내에서 해당 블록을 강제적으로 벗어나 다음 문장을 처리하도록 할 때 사용</li>
+				</ul>
+			</li>
+		</ul>
+	</h3>
+	<hr>
+	<script>
+		var x=0;
+		var sum=0;
+		while(1){
+			x+=3;	//3의 배수
+			if(x > 100){
+				break;
+			}
+			sum+=x;
+			document.write( x + ", ");
+		}
+		document.write("<br>");
+		document.write("1~100까지 수 중 3의 배수 합 : <b>"+ sum + "</b>");
+	</script>
+</body>
+</html>
