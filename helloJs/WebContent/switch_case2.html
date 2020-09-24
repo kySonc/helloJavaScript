@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>switch_case문</title>
+</head>
+	<h2>요일별 일정을 알려주는 프로그램 만들기</h2>
+	<hr>
+<body>
+	<script>
+		var Text;
+		var week = new Date().getDay();	//0(일요일)~6(토요일)
+		switch(week){
+			case 1:	//월요일
+			case 2:	//화요일
+				Text="HTML5"; 
+				break;
+			case 3:	//수요일
+			case 4:	//목요일
+				Text="자바스크립트"; 
+				break;
+			case 5:	//금요일
+			case 6:	//토요일
+				Text="영어"; 
+				break;
+			case 0:	//일요일
+			default:
+				Text="수영";
+		}
+		document.write("오늘은 <b>"+ Text +"</b> 학습하는 날입니다. <p/>");
+	</script>
+</body>
+</html>
