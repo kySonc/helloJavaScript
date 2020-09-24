@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수 선언과 호출</title>
+  </head>
+  <body>
+    <ul>
+      <li>기본 함수와 무명함수 호출 우선순위</li>
+    </ul>
+    <hr />
+    <script>
+      var printMsg = function (msg) {
+        //무명 함수 선언
+        document.write("무명 함수 : " + msg + "<br>");
+      };
+      function printMsg(msg) {
+        //기본 함수 선언
+        document.write("기본 함수 : " + msg + "<br>");
+      }
+      printMsg("호출 되었습니다."); //함수 호출
+    </script>
+  </body>
+</html>
