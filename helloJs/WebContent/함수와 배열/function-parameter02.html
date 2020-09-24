@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>인자와 매개 변수</title>
+  </head>
+  <body>
+    <ul>
+      <li>인자의 개수가 적을 때 처리 방법 살펴보기</li>
+    </ul>
+    <hr />
+    <script>
+      function add(x, y, z) {
+        var sum;
+        if (y === undefined && z === undefined) {
+          sum = x;
+        } else if (z === undefined) {
+          sum = x + y;
+        } else {
+          sum = x + y + z;
+        }
+        return sum;
+      }
+      var r1 = add(2);
+      var r2 = add(2, 3);
+      var r3 = add(2, 3, 4);
+      document.write("정상적인 함수 호출 : " + r1 + "<p/>");
+      document.write("정상적인 함수 호출 : " + r2 + "<p/>");
+      document.write("정상적인 함수 호출 : " + r3 + "<p/>");
+    </script>
+  </body>
+</html>
