@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반환값 출력</title>
+  </head>
+  <body>
+    <ul>
+      <li>서로 다른 변수로 같은 함수의 반환값 출력하기</li>
+    </ul>
+    <hr />
+    <script>
+      function add(x, y) {
+        return x + y;
+      }
+      var calSum = add; //함수를 변수에 할당
+      var addUp = add; //함수를 변수에 할당
+      document.write("결과 : " + calSum(5, 10) + "<br>");
+      document.write("결과 : " + addUp(3, 20) + "<br>");
+    </script>
+  </body>
+</html>
