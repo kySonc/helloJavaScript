@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>label문</title>
+</head>
+<body>
+	<h3>
+		<ul>
+			<li>label문
+				<ul>
+					<li>제어를 블록 바깥으로 옮김</li>
+				</ul>
+			</li>
+		</ul>
+	</h3>
+	<hr>
+	<script>
+		var i, j;
+		outloop:	//label name
+		for(i=0; i<3; i++){
+			inloop:	//label name
+			for(j=0; j<3; j++){
+				if(i===1 && j===0){
+					continue outloop;
+				}
+			document.write("i = " + i + ", j = " + j + "<br>");	
+			}
+		}
+	</script>
+</body>
+</html>
