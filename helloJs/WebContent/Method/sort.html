@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sort 메소드</title>
+  </head>
+  <body>
+    <h3>sort</h3>
+    <ul>
+      <li>배열 원소를 정렬</li>
+    </ul>
+    <hr />
+    <h5>sort메소드 활용하기</h5>
+    <script>
+      var nData1 = [19, 55, 79, 3, 2, 44, 67, 8, 15, 10];
+      var nData2 = [134, 2, 4, 55, 123, 231, 19, 32, 33];
+      var eData1 = ["Apple", "Html", "Game", "Computer"];
+      var kData1 = ["서울", "부산", "구포", "대구", "인천"];
+      document.write("수치 정렬1 : " + nData1.sort() + "<p/>");
+      document.write("수치 정렬2 : " + nData2.sort() + "<p/>");
+      document.write(
+        "수치 정렬3 : " +
+          nData1.sort(function (a, b) {
+            return a - b;
+          }) +
+          "<p/>"
+      );
+      document.write("영문 정렬 : " + eData1.sort() + "<p/>");
+      document.write(" 한글 정렬 : " + kData1.sort() + "<p/>");
+    </script>
+  </body>
+</html>
