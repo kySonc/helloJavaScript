@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forEach 메소드</title>
+  </head>
+  <body>
+    <h3>forEach</h3>
+    <ul>
+      <li>배열을 반복하며 저장된 데이터를 조회</li>
+    </ul>
+    <hr />
+    <h5>forEach 메소드 활용하기</h5>
+    <script>
+      var kData = ["서울", "부산", "구포", "대구", "대전"];
+      function printArr(item, index) {
+        //값 , 인덱스
+        document.write("배열 데이터 : [" + index + "] : " + item + "<br>");
+      }
+      kData.forEach(printArr);
+    </script>
+  </body>
+</html>
