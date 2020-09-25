@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>join 메소드</title>
+  </head>
+  <body>
+    <h3>join</h3>
+    <ul>
+      <li>배열에 저장된 모든 원소를 문자열로 변환한 후 연결하여 출력</li>
+    </ul>
+    <hr />
+    <h5>join 메소드 활용하기</h5>
+    <script>
+      var city = ["서울", "부산", "대전"];
+      var joinData1 = city.join(); //city 배열 객체의 조인 사용
+      var joinData2 = city.join("-");
+      var joinData3 = city.join(" 그리고 ");
+      document.write("조인 결과1 : " + joinData1 + "<p/>");
+      document.write("조인 결과2 : " + joinData2 + "<p/>");
+      document.write("조인 결과3 : " + joinData3 + "<p/>");
+    </script>
+  </body>
+</html>
