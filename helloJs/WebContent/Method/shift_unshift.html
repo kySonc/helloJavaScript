@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shift & unshift 메소드</title>
+  </head>
+  <body>
+    <h3>shift & unshift</h3>
+    <ul>
+      <li>
+        shift 메소드 : 배열의 맨 처음 위치에 데이터를 삭제하고 배열의 길이 반환
+      </li>
+      <li>
+        unshift 메소드 : 배열의 맨 처음 위치에 데이터를 삽입하고 배열의 길이
+        반환
+      </li>
+    </ul>
+    <hr />
+    <h5>shift & unshift 메소드 활용하기</h5>
+    <script>
+      var kData = ["서울", "부산", "구포", "대구", "대전"];
+      var ush = kData.unshift("청주", "세종");
+      document.write("테이터 : " + ush + "<p/>");
+      document.write("배열 데이터: " + kData + "<p/>");
+
+      var sh = kData.shift();
+      document.write("데이터 : " + sh + "<p/>");
+      document.write("배열 데이터 : " + kData + "<p/>");
+    </script>
+  </body>
+</html>
