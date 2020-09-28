@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자바스크립트 객체</title>
+  </head>
+  <body>
+    <h3>객체 생성</h3>
+    <h4>생성자 함수를 이용하는 방법</h4>
+    <hr />
+    <h5>이미 생성된 객체에 속성 추가 및 삭제하기</h5>
+
+    <p>[Hong's Car]</p>
+    <p id="hong1"></p>
+    <p id="hong2"></p>
+    <p id="hong3"></p>
+
+    <p>[kim's Car]</p>
+    <p id="data1"></p>
+    <p id="data2"></p>
+    <p id="data3"></p>
+    <p id="data4"></p>
+
+    <script>
+      function Car(name, color, speed) {
+        this.name = name;
+        this.color = color;
+        this.speed = speed;
+        this.speedup = function () {
+          return this.speed + 10;
+        };
+        this.speeddown = function () {
+          return this.speed - 10;
+        };
+      }
+
+      var Hongcar = new Car("Sonata", "blue", 100);
+      var kimcar = new Car("jeep", "red", 70);
+      kimcar.price = "3천만원"; //객체 생성 속성 추가
+      delete kimcar.color; //객체 삭제
+
+      var cname = document.getElementById("hong1");
+      cname.textContent = "자동차 이름 : " + Hongcar.name;
+      var colname = document.getElementById("hong2");
+      colname.textContent = "자동차 색상 : " + Hongcar.color;
+      var cspeed = document.getElementById("hong3");
+      cspeed.textContent = "자동차 속도 : " + Hongcar.speedup();
+
+      var cname = document.getElementById("data1");
+      cname.textContent = "자동차 이름 : " + kimcar.name;
+      var colname = document.getElementById("data2");
+      colname.textContent = "자동차 색상 : " + kimcar.color; //undefined
+      var cspeed = document.getElementById("data3");
+      cspeed.textContent = "자동차 속도 : " + kimcar.speedup();
+      var cspeed = document.getElementById("data4");
+      cspeed.textContent = "자동차 속도 : " + kimcar.price;
+    </script>
+  </body>
+</html>
