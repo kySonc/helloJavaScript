@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자바스크립트 객체</title>
+  </head>
+  <body>
+    <h3>객체 생성</h3>
+    <h4>객체 변수를 이용하는 방법</h4>
+    <hr />
+    <h5>자동차 객체 생성하기</h5>
+
+    <p id="carname""></p>
+    <p id="carcolor"></p>
+    <p id="carspeed"></p>
+
+    <script>
+      var car = {
+        name:'Sonata', speed:50, color:'white', start:function(){
+          return this.speed+10;
+        }
+      };
+      var cname=document.getElementById("carname"); //carname에 cname을 반환 
+      cname.textContent=car.name; //car.name = cname 넣고 carname객체변수의 내용을 출력
+      var colname = document.getElementById("carcolor");
+      carcolor.textContent=car.color;
+      var carspeed=document.getElementById("carspeed");
+      carspeed.textContent=car.speed; //carspeed에 반환된 값을 출력 
+      //var cspeed=document.getElementById("carspeed"); // 변화된 carspeed 출력 60
+      //cspeed.textContent=car.start(); //메소드 호출
+    </script>
+  </body>
+</html>
