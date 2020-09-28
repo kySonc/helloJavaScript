@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자바스크립트 객체</title>
+  </head>
+  <body>
+    <h3>객체 생성</h3>
+    <h4>객체 변수를 이용하는 방법</h4>
+    <hr />
+    <h5>자동차 속도 제어하기</h5>
+
+    <p id="upspeed""></p>
+    <p id="downspeed"></p>
+
+    <script>
+      var car = {
+        name:
+          'Sonata',
+          speed:100,
+          color:'white',
+          speedup:function(a){
+            var sp=this.speed+a;
+            if(sp>=300){
+              sp=50;
+              return sp;
+            }
+            else{
+              return sp;
+            }
+          },
+          speeddown:function(a){
+            var sp=this.speed-a;
+            if(sp<0){
+              sp=0;
+              return sp;
+            }
+            else{
+              return sp;
+            }
+          }
+      };
+      var upspeed=document.getElementById("upspeed");
+      upspeed.textContent="속도 증가 : " + car.speedup(100); 
+      var downspeed=document.getElementById("downspeed");
+      downspeed.textContent="속도 감소 : " + car.speeddown(30);
+    </script>
+  </body>
+</html>
