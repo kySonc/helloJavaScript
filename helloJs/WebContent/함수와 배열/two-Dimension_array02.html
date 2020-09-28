@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2차원 배열</title>
+  </head>
+    <h3>연관 배열과 2차원 배열</h3>
+    <ul>
+      <li>2차원 배열</li>
+    </ul>
+    <hr />
+    <h4>반복문을 이용하여 2차원 배열 만들기</h4>
+    <script>
+      var data=[];
+      for(var i=0; i<10; ++i){
+        data[i]=[String( i + "-" + 0), String(i + "-" +1), String(i+"-"+2)];
+      }
+      function printData(){
+        for(var x=0; x<data.length; x++){
+          for(var y=0; y<data[x].length; y++){
+            document.write(data[x][y]+" ");
+          }
+          document.write("</p>");
+        }
+        document.write("<a href='two-Dimension_array02.html'>돌아기기</p>");
+      }
+    </script>
+    <button type="button" onclick="printData()">전체 배열 데이터 보기</button></P>
+  </body>
+</html>
