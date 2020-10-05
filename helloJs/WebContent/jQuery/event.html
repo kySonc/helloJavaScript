@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제이쿼리 코드 구조와 이벤트 처리</title>
+    <script>
+      function add() {
+        var header = document.createElement("h3"); // 요소 노드 생성
+        var textNode = document.createTextNode("내 이름은 홍길동입니다."); // 텍스트 노드 생성
+        header.appendChild(textNode); // 요소 노드와 텍스트 노드 연결
+        document.body.appendChild(header); // 생성한 문서 객체를 body에 추가
+      }
+    </script>
+  </head>
+  <body>
+    <h3>제이쿼리 코드 구조</h3>
+    <h4>1. 제이쿼리 함수</h4>
+    <h5>
+      선택자로 웹 문서에서 특정 요소를 찾아 그 요소를 참조하는 제이쿼리 객체를
+      생성
+    </h5>
+    <ul>
+      <li>기본형 : jQuery(선택자).메소드</li>
+      <li>단축형 : $(선택자).메소드</li>
+    </ul>
+    <hr />
+    <br />
+    <h4>2. 특정 요소를 감추는 제이쿼리 코드 예</h4>
+    <table border="1">
+      <tr>
+        <td>$("p").hide()</td>
+        <td>모든 < p >요소를 찾아서 감춤</td>
+      </tr>
+      <tr>
+        <td>$(".group").hide()</td>
+        <td>class="group"인 요소를 찾아서 감춤</td>
+      </tr>
+      <tr>
+        <td>$("#group").hide()</td>
+        <td>id="group"인 요소를 찾아서 감춤</td>
+      </tr>
+      <tr>
+        <td>$(this).hide()</td>
+        <td>자기 자신을 찾아서 감춤</td>
+      </tr>
+    </table>
+    <hr />
+    <br />
+    <h4>3. css 선택자 형식별 제이쿼리 코드 작성 방법</h4>
+    <table border="1">
+      <tr>
+        <th>선택자 형식</th>
+        <th>HTML문서</th>
+        <th>제이쿼리 코드</th>
+      </tr>
+      <tr>
+        <td>요소 선택자</td>
+        <td>
+          <pre>
+< body >
+    < p >jQuery< /p >
+    < p >Study< /p >
+< /body ></pre
+          >
+        </td>
+        <td>$("p").hide( );</td>
+      </tr>
+      <tr>
+        <td>.class 선택자</td>
+        <td>
+          <pre>
+< body >
+    < p class="c1">jQuery< /p >    
+< /body ></pre
+          >
+        </td>
+        <td>$(".c1").hide( );</td>
+      </tr>
+      <tr>
+        <td>#id 선택자</td>
+        <td>
+          <pre>
+< body >
+    < p id="hong">jQuery< /p >    
+< /body ></pre
+          >
+        </td>
+        <td>$("#hong").hide( );</td>
+      </tr>
+    </table>
+    <h4>4. css 선택자 형식별 제이쿼리 코드 작성 방법</h4>
+    <table border="1">
+      <tr>
+        <th>선택자 형식</th>
+        <th>HTML문서</th>
+        <th>제이쿼리 코드</th>
+      </tr>
+      <tr>
+        <td>첫번째 요소 선택자</td>
+        <td>
+          <pre>
+< body >
+    < p >jQuery< /p >
+    < p >Study< /p >
+< /body ></pre
+          >
+        </td>
+        <td>$("p:first").hide( );</td>
+      </tr>
+      <tr>
+        <td>속성 선택자</td>
+        <td>
+          <pre>
+< body >
+    < a href="http://www.jQuery.com">Link< /a >    
+< /body ></pre
+          >
+        </td>
+        <td>$("[href]")</td>
+      </tr>
+      <tr>
+        <td>모든 선택자</td>
+        <td>
+          <pre>
+< body >
+    < p >jQuery< /p >    
+< /body ></pre
+          >
+        </td>
+        <td>$("*").hide( );</td>
+      </tr>
+      <tr>
+        <td>자기 자신</td>
+        <td>
+          <pre>
+< body >
+    < p >jQuery< /p >
+    < button >클릭 버튼< /button >    
+< /body ></pre
+          >
+        </td>
+        <td>$(this)).hide( );</td>
+      </tr>
+    </table>
+  </body>
+</html>
